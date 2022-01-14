@@ -1,0 +1,37 @@
+Installeer livewire:
+composer require livewire/livewire
+
+Voeg assets toe aan app.blade.php
+<html>
+<head>
+    ...
+    @livewireStyles
+</head>
+<body>
+    ...
+    @livewireScripts
+</body>
+</html>
+
+
+Maak component:
+php artisan livewire:make DataHouseIndex
+
+Verplaats de hele markup van de houses/index.blade.php naar de component
+ en daarvoor in de plaats <livewire:data-hous-index/>
+ Vergeet niet de houses variabele mee te geven aan de component app/http/livewire/datahouseindex.php
+     public function render()
+    {
+        return view('livewire.data-house-index',[
+            'houses' => House::paginate(4),
+        ]);
+    }
+
+Nog toe te voegen:
+use Livewire\WithPagination;
+
+class DataHouseIndex extends Component
+{
+    use WithPagination;
+
+en het werkt.

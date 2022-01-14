@@ -11,28 +11,5 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quia labore eaque modi id ipsum iusto delectus animi porro. Soluta quisquam ex nesciunt natus ea nihil quia cum! Quis necessitatibus tenetur dolore reprehenderit, quos quae explicabo maxime iure, minus commodi nesciunt numquam nostrum cupiditate recusandae in ab soluta ullam velit dignissimos. Esse autem eveniet cumque est consectetur dolore atque. Ipsa repellat repellendus labore reprehenderit aliquid reiciendis quasi neque sit porro omnis! Saepe, velit voluptas suscipit odio temporibus in, porro expedita doloribus totam accusantium veniam deserunt est quibusdam rem rerum! Aliquid ex vitae rem ipsum mollitia dignissimos itaque facilis aperiam aut totam, velit libero, quod, temporibus minima. Repellat dicta iure facilis ullam odio, dolor alias repellendus nam ipsum dolores aliquid id consequuntur ipsa maiores. Alias recusandae voluptatum accusamus, temporibus officia deserunt architecto quam ad aperiam ipsa dolores. Quaerat earum possimus nesciunt quas pariatur nemo repudiandae iste tempora exercitationem vero vel autem officia, aut consequuntur porro illo architecto cum ut consectetur id saepe. Doloremque pariatur error, explicabo delectus necessitatibus cumque hic tenetur nisi officiis exercitationem amet tempore iure, ex laboriosam ullam dicta, maiores ipsum quia omnis sapiente. Facilis fugiat laudantium animi, reprehenderit libero maiores culpa dignissimos similique id quo labore? Vero veniam sequi tenetur? Perferendis quas molestias eligendi optio tempora blanditiis repellat voluptatem, nisi a consequuntur magnam, unde voluptates, quasi eos nulla nostrum odio commodi vero. Tempore voluptas pariatur illo facilis eaque? Natus, necessitatibus ipsam. Enim eaque corporis maiores commodi eligendi accusantium, accusamus sit recusandae, sint minus rem laudantium expedita consequuntur placeat obcaecati reiciendis animi ipsam, sapiente adipisci consequatur! Laudantium, obcaecati aspernatur! Consectetur ut veritatis ratione optio laudantium, deserunt dicta at ipsum voluptate vel ipsa animi odio consequatur fugiat a labore dignissimos tenetur amet expedita consequuntur. Asperiores tenetur laudantium reiciendis, velit cupiditate similique error possimus ipsa maxime dolores distinctio odio suscipit eos!</p>
 
     </div>
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <div class="container mx-auto">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            @foreach ($houses as $house)
-                                <div
-                                    class="flex flex-col justify-center text-3xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100"
-                                >
-                                    <div>{{ $house->name }}</div>
-                                    {{-- {{ $house->description }}<br>
-                                    {{ $house->address }}<br>
-                                    {{ $house->city }}<br> --}}
-                                    <div><img width="50" src='{{ $house->photo }}'></div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                {{ $houses->links() }}
-            </div>
-        </div>
-    </div>
+    <livewire:data-house-index />
 </x-app-layout>
