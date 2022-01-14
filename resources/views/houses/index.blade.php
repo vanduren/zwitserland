@@ -25,6 +25,7 @@
                         </div>
                     </div>
                 </div>
+                {{ $houses->links() }}
             </div>
         </div>
     </div>
