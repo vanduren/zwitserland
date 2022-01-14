@@ -13,8 +13,11 @@ class HouseFactory extends Factory
      */
     public function definition()
     {
+        $first = "The ";
+        $second = $this->faker->colorName() . " ";
+        $third = $this->faker->randomElement(['house', 'mansion', 'villa', 'apartment']);
         return [
-            'name' => $this->faker->name(),
+            'name' => $first . $second . $third,
             'description' =>$this->faker->text(),
             'address' => $this->faker->address(),
             'city' => $this->faker->city(),
