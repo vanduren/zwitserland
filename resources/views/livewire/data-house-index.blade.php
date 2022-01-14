@@ -3,17 +3,15 @@
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-white border-b border-gray-200">
                 <div class="container mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         @foreach ($houses as $house)
-                            <div
+                            <a
+                                href="{{ route('house.show', $house) }}"
                                 class="flex flex-col justify-center text-3xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100"
                             >
                                 <div>{{ $house->name }}</div>
-                                {{-- {{ $house->description }}<br>
-                                {{ $house->address }}<br>
-                                {{ $house->city }}<br> --}}
                                 <div><img width="50" src='{{ $house->photo }}'></div>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>
