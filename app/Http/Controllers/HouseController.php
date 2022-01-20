@@ -15,6 +15,7 @@ class HouseController extends Controller
     public function index()
     {
         return view('houses.index', [
+            'test' => 'ao3',
             // 'houses' => House::all(),
             'houses' => House::paginate(4),
         ]);
